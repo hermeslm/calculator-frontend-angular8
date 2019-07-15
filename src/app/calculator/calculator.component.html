@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header">CALCULATOR</div>
+  <form (ngSubmit)="compute()" name="myForm">
+    <div class="card-body">
+      <div class="form-group">
+        <div class="form-group d-flex flex-row">
+          <p><b>You can add expressions like: 5+4, (10+20)*2, (10+20):2... please use ":" as division operator.</b></p>
+        </div>
+        <div class="form-group d-flex flex-row">
+          <input [(ngModel)]='expression' type="text" name="exresion" class="form-control"> &nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
+      <div class="">
+        <br>
+        <button class="btn btn-success" type="submit" (click)='compute()'> Compute</button>
+        <br><br><br>
+      </div>
+      <div class="card-footer">
+        <h4>You result: {{result}}</h4>
+      </div>
+    </div>
+  </form>
+</div>
